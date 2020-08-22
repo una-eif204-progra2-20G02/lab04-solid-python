@@ -3,3 +3,17 @@
 //
 
 #include "Streaming.h"
+
+void Streaming::replace() {
+
+}
+
+Streaming::Streaming() : Game() {
+    
+}
+
+string Streaming::toString() {
+
+}
+
+Streaming::~Streaming() {}
