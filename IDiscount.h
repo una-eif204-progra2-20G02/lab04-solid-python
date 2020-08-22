@@ -7,7 +7,8 @@
 
 
 class IDiscount {
-
+public:
+    virtual double discount() = 0;
 };
 
 

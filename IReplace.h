@@ -7,7 +7,8 @@
 
 
 class IReplace {
-
+public:
+    virtual double replace() = 0;
 };
 
 

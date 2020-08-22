@@ -7,7 +7,8 @@
 
 
 class IShipment {
-
+public:
+    virtual double shipment() = 0;
 };
 
 
