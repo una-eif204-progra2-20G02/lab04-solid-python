@@ -4,9 +4,20 @@
 
 #ifndef LAB04_SOLID_GAME_H
 #define LAB04_SOLID_GAME_H
+
 #include <sstream>
+#include <iostream>
+using namespace std;
 
 class Game {
+
+private:
+    std::string name;
+    double price;
+    double tax;
+    double itemWeight;
+    std::string productDimensions;
+
 public:
     Game();
 
@@ -34,17 +45,12 @@ public:
 
     void setProductDimensions(const std::string &productDimensions);
 
-    double calculatePriceWithTax();
+    virtual double calculatePriceWithTax(); //virtual
 
-    void save(const std::string &filename);
+    virtual void save(const std::string &filename); // virtual
 
-    std::string toString();
-private:
-    std::string name;
-    double price;
-    double tax;
-    double itemWeight;
-    std::string productDimensions;
+    virtual std::string toString();//virtual
+
 };
 
 

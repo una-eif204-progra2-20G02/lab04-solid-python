@@ -6,13 +6,19 @@
 #include <fstream>
 #include "Game.h"
 
-Game::Game() {}
+Game::Game() {
 
-Game::Game(const std::string &name, double price, double tax) : name(name), price(price), tax(tax) {}
+}
+
+Game::Game(const std::string &name, double price, double tax) : name(name), price(price), tax(tax) {
+
+}
 
 Game::Game(const std::string &name, double price, double itemWeight,
            const std::string &productDimensions) : name(name), price(price), itemWeight(itemWeight),
-           productDimensions(productDimensions) {}
+           productDimensions(productDimensions) {
+
+}
 
 const std::string &Game::getName() const {
     return name;
