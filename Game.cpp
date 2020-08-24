@@ -14,9 +14,8 @@ Game::Game(const std::string &name, double price, double tax) : name(name), pric
 
 }
 
-Game::Game(const std::string &name, double price, double itemWeight,
-           const std::string &productDimensions) : name(name), price(price), itemWeight(itemWeight),
-           productDimensions(productDimensions) {
+Game::Game(const std::string &name, double price) : name(name), price(price)/*, itemWeight(itemWeight),
+           productDimensions(productDimensions)*/ {
 
 }
 
@@ -44,7 +43,7 @@ void Game::setTax(double tax) {
     Game::tax = tax;
 }
 
-double Game::getItemWeight() const {
+/*double Game::getItemWeight() const {
     return itemWeight;
 }
 
@@ -58,7 +57,7 @@ const std::string &Game::getProductDimensions() const {
 
 void Game::setProductDimensions(const std::string &productDimensions) {
     Game::productDimensions = productDimensions;
-}
+}*/
 
 double Game::calculatePriceWithTax() {
     return getPrice() + (getPrice() * getTax());
@@ -80,8 +79,6 @@ std::string Game::toString() {
     std::ostringstream output;
     output << std::fixed << std::setprecision(2);
     output << "Game Name: " << getName()
-           << "\nItem Weight: " << getItemWeight()
-           << "\nProduct Dimensions: " << getProductDimensions()
            << "\nPrice: $" << getPrice()
            << "\nPrice with Tax: $" << calculatePriceWithTax();
 

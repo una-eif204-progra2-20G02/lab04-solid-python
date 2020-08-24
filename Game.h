@@ -15,15 +15,16 @@ private:
     std::string name;
     double price;
     double tax;
-    double itemWeight;
-    std::string productDimensions;
+    //double itemWeight; open/close principle, physical game has weight, but
+    //a streaming or digital game does not have a weight
+   // std::string productDimensions; open/close principle
 
 public:
     Game();
 
     Game(const std::string &name, double price, double tax);
 
-    Game(const std::string &name, double price, double itemWeight, const std::string &productDimensions);
+    Game(const std::string &name, double price);
 
     const std::string &getName() const;
 
@@ -37,13 +38,13 @@ public:
 
     void setTax(double tax);
 
-    double getItemWeight() const;
+   // double getItemWeight() const;
 
-    void setItemWeight(double itemWeight);
+   // void setItemWeight(double itemWeight);
 
     const std::string &getProductDimensions() const;
 
-    void setProductDimensions(const std::string &productDimensions);
+   // void setProductDimensions(const std::string &productDimensions);
 
     virtual double calculatePriceWithTax(); //virtual
 
