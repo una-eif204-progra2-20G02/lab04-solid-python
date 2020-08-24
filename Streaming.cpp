@@ -8,7 +8,7 @@ Streaming::Streaming(string name, double price, double itemWeight, string produc
 
 }
 
-void Streaming::replace() { //este no seria un string ?? 
+double Streaming::replace() { //este no seria un string ??
     
 }
 

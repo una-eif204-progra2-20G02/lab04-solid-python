@@ -10,9 +10,9 @@
 
 class Digital : IReplace, public Game {
     public:
-        Digital(string name, double price, double itemWeight, string productDimensions, double tax);
+        Digital(string name, double price/*, double itemWeight, string productDimensions,*/, double tax);
 
-        void replace() override;
+        double replace() override;
 
         string toString() override;
 

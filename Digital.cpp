@@ -4,11 +4,11 @@
 
 #include "Digital.h"
 
-Digital::Digital(string name, double price, double itemWeight, string productDimensions, double tax) : Game(name, itemWeight, productDimensions,tax) {
+Digital::Digital(string name, double price, /*double itemWeight, string productDimensions*/ double tax) : Game(name,/*, itemWeight, productDimensions,*/tax) {
 
 }
 
-void Digital::replace() { //este no seria un string ??
+double Digital::replace() { //este no seria un string ?? ->probably
 
 }
 
