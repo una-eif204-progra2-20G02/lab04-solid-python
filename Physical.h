@@ -6,20 +6,21 @@
 #define LAB04_SOLID_PHYSICAL_H
 
 #include "Game.h"
-#include "IReplace.h"
+    #include "IShipment.h"
 
-class Physical : IReplace, public Game {
+class Physical : IShipment, public Game {
 private:
     double itemWeight;
     string itemDimensions;
 public:
+    Physical();
     Physical(string name, double price, double itemWeight, string productDimensions, double tax);
-
+    string shipment() override;
     double getItemWeight();
     void setItemWeight(double);
     void setItemDimensions(string);
     string getItemDimensions();
-    double replace() override;
+
     string toString() override;
 
     ~Physical();

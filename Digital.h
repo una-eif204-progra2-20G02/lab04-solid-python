@@ -7,13 +7,14 @@
 
 #include "Game.h"
 #include "IReplace.h"
+#include "IDiscount.h"
 
-class Digital : IReplace, public Game {
+class Digital : IReplace, IDiscount, public Game {
     public:
         Digital(string name, double price/*, double itemWeight, string productDimensions,*/, double tax);
 
-        double replace() override;
-
+        string replace() override;
+        double discount() override;
         string toString() override;
 
         ~Digital();

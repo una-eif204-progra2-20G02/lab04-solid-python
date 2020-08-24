@@ -5,10 +5,12 @@
 #ifndef LAB04_SOLID_IREPLACE_H
 #define LAB04_SOLID_IREPLACE_H
 
-
+#include<iostream>
+#include<sstream>
+using namespace std;
 class IReplace {
 public:
-    virtual double replace() = 0;
+    virtual string replace() = 0;
 };
 
 

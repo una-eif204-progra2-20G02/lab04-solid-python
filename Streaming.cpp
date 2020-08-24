@@ -8,8 +8,9 @@ Streaming::Streaming(string name, double price, double itemWeight, string produc
 
 }
 
-double Streaming::replace() { //este no seria un string ??
-    
+string Streaming::replace() {
+    stringstream s;
+    s << "This product will have a replacement" << endl;
 }
 
 string Streaming::toString() {

@@ -8,8 +8,10 @@ Digital::Digital(string name, double price, /*double itemWeight, string productD
 
 }
 
-double Digital::replace() { //este no seria un string ?? ->probably
-
+string Digital::replace() {
+stringstream s;
+s << "This item will have a replacement" << endl;
+return s.str();
 }
 
 string Digital::toString() {
@@ -20,4 +22,9 @@ string Digital::toString() {
 
 Digital::~Digital() {
 
+}
+
+double Digital::discount() {
+    double discount = (getPrice() + getTax()) * 0.15;
+    return discount;
 }

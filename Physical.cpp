@@ -4,13 +4,16 @@
 
 #include "Physical.h"
 
+Physical::Physical() {
+    itemWeight = 0.0;
+    itemDimensions = "";
+}
+
 Physical::Physical(string name, double price, double itemWeight, string productDimensions, double tax) : Game(name, itemWeight, productDimensions,tax) {
 
 }
 
-double Physical::replace() { //este no seria un string ??
 
-}
 
 string Physical::toString() {
     stringstream s;
@@ -37,3 +40,11 @@ this->itemDimensions = itemDimensions;
 string Physical::getItemDimensions() {
     return std::string();
 }
+
+string Physical::shipment() {
+    stringstream s;
+    s << "This product will have a shipment" << endl;
+    return s.str();
+}
+
+
