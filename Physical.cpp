@@ -8,7 +8,7 @@ Physical::Physical(string name, double price, double itemWeight, string productD
 
 }
 
-void Physical::replace() { //este no seria un string ??
+double Physical::replace() { //este no seria un string ??
 
 }
 
@@ -20,4 +20,20 @@ string Physical::toString() {
 
 Physical::~Physical() {
 
+}
+
+double Physical::getItemWeight() {
+    return itemWeight;
+}
+
+void Physical::setItemWeight(double itemWeight) {
+this->itemWeight = itemWeight;
+}
+
+void Physical::setItemDimensions(string itemDimensions) {
+this->itemDimensions = itemDimensions;
+}
+
+string Physical::getItemDimensions() {
+    return std::string();
 }

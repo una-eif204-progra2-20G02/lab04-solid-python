@@ -9,12 +9,17 @@
 #include "IReplace.h"
 
 class Physical : IReplace, public Game {
-
+private:
+    double itemWeight;
+    string itemDimensions;
 public:
     Physical(string name, double price, double itemWeight, string productDimensions, double tax);
 
-    void replace() override;
-
+    double getItemWeight();
+    void setItemWeight(double);
+    void setItemDimensions(string);
+    string getItemDimensions();
+    double replace() override;
     string toString() override;
 
     ~Physical();
