@@ -10,14 +10,11 @@
 class Streaming : IReplace, public Game {
 
 public:
-    Streaming(string name, double price, /*double itemWeight, string productDimensions,*/ double tax);
-//check constructor, a streaming game has weight or dimensions? digital definitely does not
-    string replace() override;
-
+    Streaming();
+    Streaming(string,double,double);
     string toString() override;
-
     ~Streaming();
-
+    string replace();
 };
 
 

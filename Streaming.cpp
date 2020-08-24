@@ -3,22 +3,23 @@
 //
 
 #include "Streaming.h"
-
-Streaming::Streaming(string name, double price, /*double itemWeight, string productDimensions,*/ double tax) : Game(name, /*itemWeight, productDimensions,*/tax) {
+Streaming::Streaming():Game(){
 
 }
 
+Streaming::Streaming(string name,double price,double tax):Game(name,price,tax){
+
+}
+
+
 string Streaming::replace() {
-    stringstream s;
-    s << "This product will have a replacement" << endl;
+    std::ostringstream output;
+    output <<"this product will have a replacement" << endl;
 }
 
 string Streaming::toString() {
-    stringstream s;
-    s<<"Streaming : \n"<<Game::toString()<< endl;
-    return s.str();
+    std::ostringstream output;
+    output << "Game Information: "<<Game::toString();
 }
 
-Streaming::~Streaming() {
-    
-}
+Streaming::~Streaming() {}
