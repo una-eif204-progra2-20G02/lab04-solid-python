@@ -9,8 +9,9 @@ Physical::Physical() {
     itemDimensions = "";
 }
 
-Physical::Physical(string name, double price, double itemWeight, string productDimensions, double tax) : Game(name, itemWeight, productDimensions,tax) {
-
+Physical::Physical(string name, double price, double itemWeight, string productDimensions, double tax) : Game(name, tax) {
+this->itemWeight = itemWeight;
+this->itemDimensions = itemDimensions;
 }
 
 

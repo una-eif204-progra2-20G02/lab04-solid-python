@@ -4,7 +4,7 @@
 
 #include "Streaming.h"
 
-Streaming::Streaming(string name, double price, double itemWeight, string productDimensions, double tax) : Game(name, itemWeight, productDimensions,tax) {
+Streaming::Streaming(string name, double price, /*double itemWeight, string productDimensions,*/ double tax) : Game(name, /*itemWeight, productDimensions,*/tax) {
 
 }
 
